@@ -72,7 +72,15 @@ jobs:
           cat CCTV.m3u > iptv.m3u
           cat CNTV.m3u >> iptv.m3u
           sed -i '/#EXTM3U/d' iptv.m3u
-          sed -i '1i #EXTM3U x-tvg-url="http://live.xn--2os270e.site/epg.xml.gz,https://e.erw.cc/all.xml.gz,http://epg.51zmt.top:8000/e.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"' iptv.m3u
+          sed -i '1i #EXTM3U x-tvg-url="http://live.xn--2os270e.site/epg.xml.gz,https://e.erw.cc/all.xml.gz,http://epg.51zmt.top:8000/e.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
+          #EXTINF:-1 tvg-id="1" tvg-name="更新日期" tvg-logo="http://xn--2os270e.site/img/MB.png" group-title="公告",更新日期
+          https://vdse.bdstatic.com//80e0473f97055cec1c9c76c1c7e5498a.mp4
+          #EXTINF:-1 tvg-id="1" tvg-name="每日三更" tvg-logo="http://xn--2os270e.site/img/MB.png" group-title="公告",每日三更
+          https://vdse.bdstatic.com//6d39df48360bdb12f73800397c4a6c02.mp4
+          #EXTINF:-1 tvg-id="1" tvg-name="关注公众号" tvg-logo="http://xn--2os270e.site/img/MB.png" group-title="公告",关注公众号
+          https://vdse.bdstatic.com//7cfaf27a4db89583e069a40fbc2ed84b.mp4
+          #EXTINF:-1 tvg-id="1" tvg-name="墨白短剧库" tvg-logo="http://xn--2os270e.site/img/MB.png" group-title="公告",墨白短剧库
+          https://vd4.bdstatic.com/mda-mhwf07t27w3gi1y7/1080p/cae_h264/1630406994590156367/mda-mhwf07t27w3gi1y7.mp4' iptv.m3u
           sed -i 's|"https://raw.githubusercontent.com|"https://ghproxy.kilvn.com/https://raw.githubusercontent.com|g' iptv.m3u
           sed -i '/^\s*$/d' iptv.m3u
 
